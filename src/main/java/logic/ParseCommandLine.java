@@ -10,14 +10,14 @@ public class ParseCommandLine {
             required = true,
             arity = 1
     )
-    private String countEnemies;
+    private int countEnemies;
 
     @Parameter(
             names = "--wallsCount",
             required = true,
             arity = 1
     )
-    private String countWalls;
+    private int countWalls;
 
     @Parameter(
             names = "--size",
@@ -33,11 +33,13 @@ public class ParseCommandLine {
     )
     private String mode;
 
-    public String getCountEnemies() {
+    public ParseCommandLine() {}
+
+    public int getCountEnemies() {
         return countEnemies;
     }
 
-    public String getCountWalls() {
+    public int getCountWalls() {
         return countWalls;
     }
 

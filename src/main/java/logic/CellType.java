@@ -3,7 +3,7 @@ package logic;
 public enum CellType {
     EMPTY,
     PLAYER,
-    ENEMY,
+    GOAL,
     WALL,
-    GOAL
+    ENEMY
 }
