@@ -9,17 +9,8 @@ import java.util.Map;
 import static logic.CellType.*;
 
 public class Colors {
-//    public Map<CellType, Ansi.BColor> cellTypeBColorMap = new HashMap<>() {
-//        {
-//            put(EMPTY, Ansi.BColor.YELLOW);
-//            put(PLAYER, Ansi.BColor.GREEN);
-//            put(ENEMY, Ansi.BColor.RED);
-//            put(WALL, Ansi.BColor.MAGENTA);
-//            put(GOAL, Ansi.BColor.BLUE);
-//        }
-//    };
 
-    public Map<String,Ansi.BColor> colorMap = new HashMap<>() {
+    public Map<String, Ansi.BColor> colorMap = new HashMap<>() {
         {
             put("YELLOW", Ansi.BColor.YELLOW);
             put("GREEN", Ansi.BColor.GREEN);
@@ -29,6 +20,6 @@ public class Colors {
         }
     };
 
-    public  Map<CellType, Ansi.BColor> cellTypeBColorMap = new HashMap<>();
+    public Map<CellType, Ansi.BColor> cellTypeBColorMap = new HashMap<>();
 
 }

@@ -3,7 +3,7 @@ package logic;
 import com.beust.jcommander.Parameter;
 import com.beust.jcommander.Parameters;
 
-@Parameters (separators = "=")
+@Parameters(separators = "=")
 public class ParseCommandLine {
     @Parameter(
             names = "--enemiesCount",
@@ -33,7 +33,8 @@ public class ParseCommandLine {
     )
     private String mode;
 
-    public ParseCommandLine() {}
+    public ParseCommandLine() {
+    }
 
     public int getCountEnemies() {
         return countEnemies;

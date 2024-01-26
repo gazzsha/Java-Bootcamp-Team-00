@@ -1,8 +1,8 @@
 package com.school.team.Utils;
 
-public class Pair <T extends Number> implements Cloneable {
+public class Pair<T extends Number> implements Cloneable {
     public T first;
-    public   T second;
+    public T second;
 
     public Pair(T first, T second) {
         this.first = first;

@@ -5,6 +5,7 @@ import com.school.team.Utils.Pair;
 public class Player {
 
     private Pair<Integer> currentPosition;
+
     public Player() {
     }
 

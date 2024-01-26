@@ -13,14 +13,15 @@ public class Logic {
     private int[][] map;
 
 
-    public Logic() {}
+    public Logic() {
+    }
 
     public void setMap(int[][] map) {
         this.map = map;
     }
 
     public Pair<Integer> nextStep(Player enemy, Pair<Integer> targetPosition, int[][] originalMap) throws ExceptionNotCorrectMap {
-        Stack<Pair<Integer>> path = waveAlgorithm(enemy.getCurrentPosition(),targetPosition,originalMap);
+        Stack<Pair<Integer>> path = waveAlgorithm(enemy.getCurrentPosition(), targetPosition, originalMap);
         path.pop();
         return path.peek();
     }
@@ -33,17 +34,17 @@ public class Logic {
         return copy;
     }
 
-    public  Stack<Pair<Integer>> waveAlgorithm(Pair<Integer> currentPosition,Pair<Integer> targetPosition,int[][] originalMap) throws ExceptionNotCorrectMap {
+    public Stack<Pair<Integer>> waveAlgorithm(Pair<Integer> currentPosition, Pair<Integer> targetPosition, int[][] originalMap) throws ExceptionNotCorrectMap {
         int[][] map = deepCopy(originalMap);
         Waves oldWave = new Waves(currentPosition);
         int step = 4;
-        while (map[targetPosition.first][targetPosition.second] == 1)  {
+        while (map[targetPosition.first][targetPosition.second] == 1) {
             if (oldWave.Waves.isEmpty()) throw new ExceptionNotCorrectMap();
             Waves nextNewWaves = new Waves();
             ++step;
             for (Pair<Integer> waves : oldWave.Waves) {
-                Waves newWaves = new Waves(new Pair<>(waves.first - 1, waves.second),new Pair<>(waves.first, waves.second + 1),
-                        new Pair<>(waves.first + 1, waves.second),new Pair<>(waves.first, waves.second - 1));
+                Waves newWaves = new Waves(new Pair<>(waves.first - 1, waves.second), new Pair<>(waves.first, waves.second + 1),
+                        new Pair<>(waves.first + 1, waves.second), new Pair<>(waves.first, waves.second - 1));
                 for (Pair<Integer> newWave : newWaves.Waves) {
                     if ((newWave.first < map.length && newWave.second < map.length && newWave.first >= 0 && newWave.second >= 0) && (map[newWave.first][newWave.second] == 0 || map[newWave.first][newWave.second] == 1)) {
                         nextNewWaves.Waves.add(newWave);
@@ -53,7 +54,7 @@ public class Logic {
             }
             oldWave = nextNewWaves;
         }
-        return solutionWave(map,currentPosition,targetPosition);
+        return solutionWave(map, currentPosition, targetPosition);
     }
 
     private void extraOpponents(int[][] map) {
@@ -64,7 +65,8 @@ public class Logic {
             }
         }
     }
-    private  Stack<Pair<Integer>> solutionWave(int[][] map,Pair<Integer> from,Pair<Integer> to) {
+
+    private Stack<Pair<Integer>> solutionWave(int[][] map, Pair<Integer> from, Pair<Integer> to) {
         extraOpponents(map);
         map[from.first][from.second] = 4;
         Stack<Pair<Integer>> path = new Stack<>();
@@ -75,16 +77,13 @@ public class Logic {
             if (copyTo.first - 1 >= 0 && map[copyTo.first - 1][copyTo.second] + 1 == lastStep) {
                 copyTo.setFirst(copyTo.first - 1);
                 path.add(new Pair<>(copyTo));
-            }
-            else if (copyTo.second + 1 < map.length && map[copyTo.first][copyTo.second + 1] + 1 == lastStep) {
+            } else if (copyTo.second + 1 < map.length && map[copyTo.first][copyTo.second + 1] + 1 == lastStep) {
                 copyTo.setSecond(copyTo.second + 1);
                 path.add(new Pair<>(copyTo));
-            }
-            else if (copyTo.first + 1 < map.length && map[copyTo.first + 1][copyTo.second] + 1 == lastStep) {
+            } else if (copyTo.first + 1 < map.length && map[copyTo.first + 1][copyTo.second] + 1 == lastStep) {
                 copyTo.setFirst(copyTo.first + 1);
                 path.add(new Pair<>(copyTo));
-            }
-            else if (copyTo.second - 1 >= 0 && map[copyTo.first][copyTo.second - 1] + 1 == lastStep) {
+            } else if (copyTo.second - 1 >= 0 && map[copyTo.first][copyTo.second - 1] + 1 == lastStep) {
                 copyTo.setSecond(copyTo.second - 1);
                 path.add(new Pair<>(copyTo));
             }
@@ -100,6 +99,7 @@ public class Logic {
             Waves = new ArrayList<>();
             Waves.add(positionWave);
         }
+
         public Waves(Pair<Integer>... args) {
             Waves = new ArrayList<>();
             for (Pair<Integer> wave : args) {
@@ -118,8 +118,9 @@ public class Logic {
         public Wave(Pair<Integer> position) {
             this.position = position;
         }
-        public  Wave(int x,int y) {
-            position = new Pair<>(x,y);
+
+        public Wave(int x, int y) {
+            position = new Pair<>(x, y);
         }
     }
 

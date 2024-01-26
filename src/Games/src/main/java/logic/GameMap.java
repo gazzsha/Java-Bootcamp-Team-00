@@ -59,7 +59,7 @@ public class GameMap {
     public void generateMap() {
         changeValue((gameMap) -> setEmptyMap());
         setGameMapWall();
-        for(int i = 0; i < parseCommandLine.getCountEnemies(); ++i) {
+        for (int i = 0; i < parseCommandLine.getCountEnemies(); ++i) {
             setPositionEnemies();
         }
         setPositionTarget();
@@ -74,73 +74,73 @@ public class GameMap {
     private Boolean stepPerson(Scanner scanner) throws Exception {
         Boolean win = false;
         Pair<Integer> currentPositionPerson = player.getCurrentPosition();
-                char step = scanner.next().toLowerCase(Locale.ROOT).toCharArray()[0];
-                scanner.nextLine();
-                switch (step) {
-                    case 'w': {
-                        if (currentPositionPerson.first - 1 >= 0 &&  ((gameMap[currentPositionPerson.first - 1][currentPositionPerson.second] == EMPTY) || gameMap[currentPositionPerson.first - 1][currentPositionPerson.second] == GOAL)) {
-                            if (gameMap[currentPositionPerson.first - 1][currentPositionPerson.second] == GOAL) {
-                                win = true;
-                            }
-                            updateMapAfterStepPerson(EMPTY);
-                            player.getCurrentPosition().first -= 1;
-                            updateMapAfterStepPerson(PLAYER);
-                        } else {
-                            System.out.println("You cant step on UP,try again!");
-                            stepPerson(scanner);
-                        }
-                        break;
+        char step = scanner.next().toLowerCase(Locale.ROOT).toCharArray()[0];
+        scanner.nextLine();
+        switch (step) {
+            case 'w': {
+                if (currentPositionPerson.first - 1 >= 0 && ((gameMap[currentPositionPerson.first - 1][currentPositionPerson.second] == EMPTY) || gameMap[currentPositionPerson.first - 1][currentPositionPerson.second] == GOAL)) {
+                    if (gameMap[currentPositionPerson.first - 1][currentPositionPerson.second] == GOAL) {
+                        win = true;
                     }
-                    case 'd': {
-                        if (currentPositionPerson.second + 1 < gameMap.length && ( (gameMap[currentPositionPerson.first][currentPositionPerson.second + 1] == EMPTY) || gameMap[currentPositionPerson.first][currentPositionPerson.second + 1] == GOAL)) {
-                            if (gameMap[currentPositionPerson.first][currentPositionPerson.second + 1] == GOAL) {
-                                win = true;
-                            }
-                            updateMapAfterStepPerson(EMPTY);
-                            player.getCurrentPosition().second += 1;
-                            updateMapAfterStepPerson(PLAYER);
-                        } else {
-                            System.out.println("You cant step on RIGHT,try again!");
-                            stepPerson(scanner);
-                        }
-                        break;
-                    }
-                    case 's': {
-                        if (currentPositionPerson.first + 1 < gameMap.length && ( (gameMap[currentPositionPerson.first + 1][currentPositionPerson.second] == EMPTY) || (gameMap[currentPositionPerson.first + 1][currentPositionPerson.second] == GOAL))) {
-                            if (gameMap[currentPositionPerson.first + 1][currentPositionPerson.second] == GOAL) {
-                                win = true;
-                            }
-                            updateMapAfterStepPerson(EMPTY);
-                            player.getCurrentPosition().first += 1;
-                            updateMapAfterStepPerson(PLAYER);
-                        } else {
-                            System.out.println("You cant step on DOWN,try again!");
-                            stepPerson(scanner);
-                        }
-                        break;
-                    }
-                    case 'a': {
-                        if (currentPositionPerson.second - 1 >= 0 && ( gameMap[currentPositionPerson.first][currentPositionPerson.second - 1] == EMPTY || gameMap[currentPositionPerson.first][currentPositionPerson.second - 1] == GOAL)) {
-                            if (gameMap[currentPositionPerson.first][currentPositionPerson.second - 1] == GOAL) {
-                                win = true;
-                            }
-                            updateMapAfterStepPerson(EMPTY);
-                            player.getCurrentPosition().second -= 1;
-                            updateMapAfterStepPerson(PLAYER);
-                        } else {
-                            System.out.println("You cant step on LEFT,try again!");
-                            stepPerson(scanner);
-                        }
-                        break;
-                    }
-                    case '9': {
-                        throw new Exception("Player give up!");
-                    }
-                    default: {
-                        System.out.println("Wrong char,try again!");
-                        stepPerson(scanner);
-                    }
+                    updateMapAfterStepPerson(EMPTY);
+                    player.getCurrentPosition().first -= 1;
+                    updateMapAfterStepPerson(PLAYER);
+                } else {
+                    System.out.println("You cant step on UP,try again!");
+                    stepPerson(scanner);
+                }
+                break;
             }
+            case 'd': {
+                if (currentPositionPerson.second + 1 < gameMap.length && ((gameMap[currentPositionPerson.first][currentPositionPerson.second + 1] == EMPTY) || gameMap[currentPositionPerson.first][currentPositionPerson.second + 1] == GOAL)) {
+                    if (gameMap[currentPositionPerson.first][currentPositionPerson.second + 1] == GOAL) {
+                        win = true;
+                    }
+                    updateMapAfterStepPerson(EMPTY);
+                    player.getCurrentPosition().second += 1;
+                    updateMapAfterStepPerson(PLAYER);
+                } else {
+                    System.out.println("You cant step on RIGHT,try again!");
+                    stepPerson(scanner);
+                }
+                break;
+            }
+            case 's': {
+                if (currentPositionPerson.first + 1 < gameMap.length && ((gameMap[currentPositionPerson.first + 1][currentPositionPerson.second] == EMPTY) || (gameMap[currentPositionPerson.first + 1][currentPositionPerson.second] == GOAL))) {
+                    if (gameMap[currentPositionPerson.first + 1][currentPositionPerson.second] == GOAL) {
+                        win = true;
+                    }
+                    updateMapAfterStepPerson(EMPTY);
+                    player.getCurrentPosition().first += 1;
+                    updateMapAfterStepPerson(PLAYER);
+                } else {
+                    System.out.println("You cant step on DOWN,try again!");
+                    stepPerson(scanner);
+                }
+                break;
+            }
+            case 'a': {
+                if (currentPositionPerson.second - 1 >= 0 && (gameMap[currentPositionPerson.first][currentPositionPerson.second - 1] == EMPTY || gameMap[currentPositionPerson.first][currentPositionPerson.second - 1] == GOAL)) {
+                    if (gameMap[currentPositionPerson.first][currentPositionPerson.second - 1] == GOAL) {
+                        win = true;
+                    }
+                    updateMapAfterStepPerson(EMPTY);
+                    player.getCurrentPosition().second -= 1;
+                    updateMapAfterStepPerson(PLAYER);
+                } else {
+                    System.out.println("You cant step on LEFT,try again!");
+                    stepPerson(scanner);
+                }
+                break;
+            }
+            case '9': {
+                throw new Exception("Player give up!");
+            }
+            default: {
+                System.out.println("Wrong char,try again!");
+                stepPerson(scanner);
+            }
+        }
         return win;
     }
 
@@ -149,14 +149,16 @@ public class GameMap {
             Pair<Integer> currentPosition = enemy.get(i).getCurrentPosition();
             Pair<Integer> nextPosition = currentPosition;
             try {
-                 nextPosition = logic.nextStep(enemy.get(i), player.getCurrentPosition(), generateIntMap());
+                nextPosition = logic.nextStep(enemy.get(i), player.getCurrentPosition(), generateIntMap());
             } catch (ExceptionNotCorrectMap exception) {
             } finally {
                 enemy.get(i).setCurrentPosition(nextPosition);
                 gameMap[currentPosition.first][currentPosition.second] = EMPTY;
                 gameMap[nextPosition.first][nextPosition.second] = ENEMY;
-                if (nextPosition.first == player.getCurrentPosition().first && nextPosition.second == player.getCurrentPosition().second) return true;
-            };
+                if (nextPosition.first == player.getCurrentPosition().first && nextPosition.second == player.getCurrentPosition().second)
+                    return true;
+            }
+            ;
         }
         return false;
     }
@@ -175,6 +177,7 @@ public class GameMap {
             System.out.println("You  lost!");
         }
     }
+
     public int[][] generateIntMap() {
 //        int[][] arr = new int[gameMap.length][gameMap.length];
 //        for(int i = 0; i < gameMap.length; ++i) {
@@ -192,8 +195,8 @@ public class GameMap {
 
     public void PrintGameMap() {
         char type;
-        for(int i = 0; i < parseCommandLine.getSizeMap(); ++i) {
-            for(int j = 0; j < parseCommandLine.getSizeMap(); ++j) {
+        for (int i = 0; i < parseCommandLine.getSizeMap(); ++i) {
+            for (int j = 0; j < parseCommandLine.getSizeMap(); ++j) {
                 type = symbol.symbolRole.get(EMPTY);
                 coloredPrinter.setBackgroundColor(Ansi.BColor.YELLOW);
                 switch (gameMap[i][j]) {
@@ -225,11 +228,11 @@ public class GameMap {
     private void setGameMapWall() {
         Random random = new Random();
         int countWall = parseCommandLine.getCountWalls();
-        while(countWall > 0) {
+        while (countWall > 0) {
             int randomRow = random.nextInt(parseCommandLine.getSizeMap());
             int randomCol = random.nextInt(parseCommandLine.getSizeMap());
 
-            if(gameMap[randomRow][randomCol] != CellType.WALL) {
+            if (gameMap[randomRow][randomCol] != CellType.WALL) {
                 gameMap[randomRow][randomCol] = CellType.WALL;
                 countWall--;
             }
@@ -245,11 +248,11 @@ public class GameMap {
     }
 
     void setPositionEnemies() {
-        while(true) {
+        while (true) {
             int xRandom = ThreadLocalRandom.current().nextInt(0, gameMap.length);
             int yRandom = ThreadLocalRandom.current().nextInt(0, gameMap.length);
 
-            if(gameMap[xRandom][yRandom] == EMPTY) {
+            if (gameMap[xRandom][yRandom] == EMPTY) {
                 gameMap[xRandom][yRandom] = ENEMY;
                 enemy.add(new Player(new Pair<>(xRandom, yRandom)));
                 break;
@@ -259,11 +262,11 @@ public class GameMap {
 
 
     void setPositionTarget() {
-        while(true) {
+        while (true) {
             int xRandom = ThreadLocalRandom.current().nextInt(0, gameMap.length);
             int yRandom = ThreadLocalRandom.current().nextInt(0, gameMap.length);
 
-            if(gameMap[xRandom][yRandom] == EMPTY) {
+            if (gameMap[xRandom][yRandom] == EMPTY) {
                 gameMap[xRandom][yRandom] = GOAL;
                 targetPosition = new Pair<>(xRandom, yRandom);
                 break;
@@ -273,12 +276,12 @@ public class GameMap {
 
 
     void setPositionPlayer() {
-        while(true) {
+        while (true) {
             int xRandom = ThreadLocalRandom.current().nextInt(0, gameMap.length);
             int yRandom = ThreadLocalRandom.current().nextInt(0, gameMap.length);
 
-            if(gameMap[xRandom][yRandom] == EMPTY && xRandom + 1 < gameMap.length && yRandom + 1 < gameMap.length && xRandom - 1 >= 0 && yRandom - 1 >= 0) {
-                if (countingNeighborhood(xRandom,yRandom) == 0) {
+            if (gameMap[xRandom][yRandom] == EMPTY && xRandom + 1 < gameMap.length && yRandom + 1 < gameMap.length && xRandom - 1 >= 0 && yRandom - 1 >= 0) {
+                if (countingNeighborhood(xRandom, yRandom) == 0) {
                     gameMap[xRandom][yRandom] = PLAYER;
                     player = new Player(new Pair<>(xRandom, yRandom));
                     break;
@@ -290,14 +293,14 @@ public class GameMap {
     private int countingNeighborhood(int rowCurrent, int colsCurrent) {
         CellPrecessing cellPrecessing = (rows, cols) -> {
             int count = 0;
-            if(gameMap[rows][cols - 1] != EMPTY) count++;
-            if(gameMap[rows][cols + 1] != EMPTY) count++;
-            if(gameMap[rows - 1][cols] != EMPTY) count++;
-            if(gameMap[rows + 1][cols] != EMPTY) count++;
-            if(gameMap[rows - 1][cols - 1] != EMPTY) count++;
-            if(gameMap[rows - 1][cols + 1] != EMPTY) count++;
-            if(gameMap[rows + 1][cols - 1] != EMPTY) count++;
-            if(gameMap[rows + 1][cols + 1] != EMPTY) count++;
+            if (gameMap[rows][cols - 1] != EMPTY) count++;
+            if (gameMap[rows][cols + 1] != EMPTY) count++;
+            if (gameMap[rows - 1][cols] != EMPTY) count++;
+            if (gameMap[rows + 1][cols] != EMPTY) count++;
+            if (gameMap[rows - 1][cols - 1] != EMPTY) count++;
+            if (gameMap[rows - 1][cols + 1] != EMPTY) count++;
+            if (gameMap[rows + 1][cols - 1] != EMPTY) count++;
+            if (gameMap[rows + 1][cols + 1] != EMPTY) count++;
             return count;
         };
         return cellPrecessing.obtainingNeighborhood(rowCurrent, colsCurrent);
