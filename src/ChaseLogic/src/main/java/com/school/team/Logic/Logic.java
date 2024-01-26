@@ -37,7 +37,7 @@ public class Logic {
         int[][] map = deepCopy(originalMap);
         Waves oldWave = new Waves(currentPosition);
         int step = 4;
-        while (map[targetPosition.first][targetPosition.second] == 2)  {
+        while (map[targetPosition.first][targetPosition.second] == 1)  {
             if (oldWave.Waves.isEmpty()) throw new ExceptionNotCorrectMap();
             Waves nextNewWaves = new Waves();
             ++step;
@@ -45,7 +45,7 @@ public class Logic {
                 Waves newWaves = new Waves(new Pair<>(waves.first - 1, waves.second),new Pair<>(waves.first, waves.second + 1),
                         new Pair<>(waves.first + 1, waves.second),new Pair<>(waves.first, waves.second - 1));
                 for (Pair<Integer> newWave : newWaves.Waves) {
-                    if ((newWave.first < map.length && newWave.second < map.length && newWave.first >= 0 && newWave.second >= 0) && (map[newWave.first][newWave.second] == 0 || map[newWave.first][newWave.second] == 2)) {
+                    if ((newWave.first < map.length && newWave.second < map.length && newWave.first >= 0 && newWave.second >= 0) && (map[newWave.first][newWave.second] == 0 || map[newWave.first][newWave.second] == 1)) {
                         nextNewWaves.Waves.add(newWave);
                         map[newWave.first][newWave.second] = step;
                     }
@@ -55,7 +55,17 @@ public class Logic {
         }
         return solutionWave(map,currentPosition,targetPosition);
     }
+
+    private void extraOpponents(int[][] map) {
+        for (int i = 0; i != map.length; i++) {
+            for (int j = 0; j != map.length; j++) {
+                if (map[i][j] == 4)
+                    map[i][j] = 3;
+            }
+        }
+    }
     private  Stack<Pair<Integer>> solutionWave(int[][] map,Pair<Integer> from,Pair<Integer> to) {
+        extraOpponents(map);
         map[from.first][from.second] = 4;
         Stack<Pair<Integer>> path = new Stack<>();
         Pair<Integer> copyTo = new Pair<>(to);

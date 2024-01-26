@@ -149,21 +149,25 @@ public class GameMap {
                  nextPosition = logic.nextStep(enemy.get(i), player.getCurrentPosition(), generateIntMap());
             } catch (ExceptionNotCorrectMap exception) {
             } finally {
+                enemy.get(i).setCurrentPosition(nextPosition);
                 gameMap[currentPosition.first][currentPosition.second] = EMPTY;
                 gameMap[nextPosition.first][nextPosition.second] = ENEMY;
+                if (nextPosition.first == player.getCurrentPosition().first && nextPosition.second == player.getCurrentPosition().second) return true;
             };
         }
         return false;
     }
 
     public void updateMap() {
+        boolean loss = false;
         try (Scanner scanner = new Scanner(System.in)) {
-            while (!stepPerson(scanner))
-                stepEnemies();
-            PrintGameMap();
+            while (! stepPerson(scanner) && !(loss = stepEnemies())) {
+                PrintGameMap();
+                System.out.println("Your next step:");
+            }
         }
         PrintGameMap();
-        System.out.println("You  win!!!");
+        if (loss) System.out.println("You  lost!"); else System.out.println("You  win!!!");
     }
     public int[][] generateIntMap() {
 //        int[][] arr = new int[gameMap.length][gameMap.length];

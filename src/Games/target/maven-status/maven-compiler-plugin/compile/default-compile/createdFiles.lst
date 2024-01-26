@@ -1,0 +1,10 @@
+logic/GameMap$1.class
+Colors/Colors.class
+logic/CellPrecessing.class
+Colors/Colors$1.class
+logic/GameMap.class
+logic/FileReader.class
+Symbol/Symbol.class
+logic/CellType.class
+logic/ParseCommandLine.class
+game/Game.class

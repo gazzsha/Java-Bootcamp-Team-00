@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b992af3-6751-458c-80a6-f8b257b23664" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChaseLogic/src/main/java/com/school/team/Utils/Pair.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/src/main/java/com/school/team/Utils/Pair.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChaseLogic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChaseLogic/src/main/java/com/school/team/Logic/Logic.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/src/main/java/com/school/team/Logic/Logic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ChaseLogic/src/main/java/com/school/team/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/src/main/java/com/school/team/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChaseLogic/target/ChaseLogic-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/target/ChaseLogic-1.0-SNAPSHOT.jar" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChaseLogic/target/ChaseLogic-1.0-SNAPSHOT.pom" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/target/ChaseLogic-1.0-SNAPSHOT.pom" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChaseLogic/target/classes/com/school/team/Enemy/Enemy.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChaseLogic/target/classes/com/school/team/Logic/Logic$Wave.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/target/classes/com/school/team/Logic/Logic$Wave.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChaseLogic/target/classes/com/school/team/Logic/Logic$Waves.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/target/classes/com/school/team/Logic/Logic$Waves.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChaseLogic/target/classes/com/school/team/Logic/Logic.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/target/classes/com/school/team/Logic/Logic.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChaseLogic/target/classes/com/school/team/Utils/Pair.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/target/classes/com/school/team/Utils/Pair.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChaseLogic/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ChaseLogic/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ChaseLogic/target/original-ChaseLogic-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/target/original-ChaseLogic-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/com/school/team/ChaseLogic/1.0-SNAPSHOT/maven-metadata.xml" beforeDir="false" afterPath="$PROJECT_DIR$/lib/com/school/team/ChaseLogic/1.0-SNAPSHOT/maven-metadata.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/com/school/team/ChaseLogic/1.0-SNAPSHOT/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/lib/com/school/team/ChaseLogic/1.0-SNAPSHOT/maven-metadata.xml.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/com/school/team/ChaseLogic/1.0-SNAPSHOT/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/lib/com/school/team/ChaseLogic/1.0-SNAPSHOT/maven-metadata.xml.sha1" afterDir="false" />
@@ -25,12 +22,13 @@
       <change beforePath="$PROJECT_DIR$/lib/com/school/team/ChaseLogic/maven-metadata.xml.md5" beforeDir="false" afterPath="$PROJECT_DIR$/lib/com/school/team/ChaseLogic/maven-metadata.xml.md5" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/com/school/team/ChaseLogic/maven-metadata.xml.sha1" beforeDir="false" afterPath="$PROJECT_DIR$/lib/com/school/team/ChaseLogic/maven-metadata.xml.sha1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/FileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/FileReader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/logic/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/GameMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Colors/Colors$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Colors/Colors$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Game.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logic/FileReader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/FileReader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logic/CellType.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/CellType.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/logic/GameMap$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/GameMap$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/logic/GameMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/GameMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,10 +77,10 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Game" type="Application" factoryName="Application" nameIsGenerated="true">
+    <configuration name="game.Game" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game.Game" />
       <module name="Games" />
-      <option name="PROGRAM_PARAMETERS" value="--enemiesCount=2 --wallsCount=10 --size=10 --profile=production" />
+      <option name="PROGRAM_PARAMETERS" value="--enemiesCount=10 --wallsCount=10 --size=30 --profile=production" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
