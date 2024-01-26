@@ -1,6 +1,6 @@
 com/school/team/Exception/ExceptionNotCorrectMap.class
 com/school/team/Logic/Logic$Wave.class
 com/school/team/Logic/Logic$Waves.class
-com/school/team/Enemy/Enemy.class
 com/school/team/Logic/Logic.class
 com/school/team/Utils/Pair.class
+com/school/team/Player/Player.class

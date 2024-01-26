@@ -18,8 +18,16 @@ public class Game {
         GameMap gameMap = new GameMap(parseCommandLine);
         gameMap.generateMap();
        gameMap.PrintGameMap();
-
         int[][] mama = gameMap.generateIntMap();
+
+        for (int i = 0; i != mama.length; i++) {
+            for (int j = 0; j != mama.length; j++) {
+                System.out.print(mama[i][j] + " ");
+            }
+            System.out.println();
+        }
+       gameMap.updateMap();
+
 
     }
 

@@ -12,7 +12,7 @@ import java.util.Locale;
 
 public class FileReader {
     private static final String file = "/application-production.properties";
-    private static final String devFile = "application-dev.properties";
+    private static final String devFile = "/application-dev.properties";
     public Colors parceColors() throws IOException {
         Colors colors = new Colors();
         try (InputStream inputStream = getClass().getResourceAsStream(file);
