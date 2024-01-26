@@ -3,21 +3,21 @@
   <groupId>com.school.team</groupId>
   <artifactId>ChaseLogic</artifactId>
   <versioning>
-    <lastUpdated>20240126165242</lastUpdated>
+    <lastUpdated>20240126180706</lastUpdated>
     <snapshot>
-      <timestamp>20240126.165242</timestamp>
-      <buildNumber>15</buildNumber>
+      <timestamp>20240126.180706</timestamp>
+      <buildNumber>16</buildNumber>
     </snapshot>
     <snapshotVersions>
       <snapshotVersion>
         <extension>jar</extension>
-        <value>1.0-20240126.165242-15</value>
-        <updated>20240126165242</updated>
+        <value>1.0-20240126.180706-16</value>
+        <updated>20240126180706</updated>
       </snapshotVersion>
       <snapshotVersion>
         <extension>pom</extension>
-        <value>1.0-20240126.165242-15</value>
-        <updated>20240126165242</updated>
+        <value>1.0-20240126.180706-16</value>
+        <updated>20240126180706</updated>
       </snapshotVersion>
     </snapshotVersions>
   </versioning>

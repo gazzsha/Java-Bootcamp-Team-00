@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b992af3-6751-458c-80a6-f8b257b23664" name="Changes" comment="" />
+    <list default="true" id="1b992af3-6751-458c-80a6-f8b257b23664" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../ChaseLogic/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ChaseLogic/pom.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
