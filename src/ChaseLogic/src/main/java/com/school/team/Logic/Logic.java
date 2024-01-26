@@ -1,6 +1,6 @@
 package com.school.team.Logic;
 
-import com.school.team.Enemy.Enemy;
+import com.school.team.Player.Player;
 import com.school.team.Exception.ExceptionNotCorrectMap;
 import com.school.team.Utils.Pair;
 
@@ -19,9 +19,8 @@ public class Logic {
         this.map = map;
     }
 
-    public Pair<Integer> nextStep(Enemy enemy,Pair<Integer> targetPosition,int[][] originalMap) throws ExceptionNotCorrectMap {
+    public Pair<Integer> nextStep(Player enemy, Pair<Integer> targetPosition, int[][] originalMap) throws ExceptionNotCorrectMap {
         Stack<Pair<Integer>> path = waveAlgorithm(enemy.getCurrentPosition(),targetPosition,originalMap);
-        System.out.println(path);
         path.pop();
         return path.peek();
     }
@@ -54,24 +53,10 @@ public class Logic {
             }
             oldWave = nextNewWaves;
         }
-//
-//        for (int i = 0; i != map.length; i++) {
-//            for (int j = 0; j != map[i].length; j++) {
-//                System.out.print(map[i][j] + " ");
-//            }
-//        //    System.out.println();
-//        }
         return solutionWave(map,currentPosition,targetPosition);
     }
     private  Stack<Pair<Integer>> solutionWave(int[][] map,Pair<Integer> from,Pair<Integer> to) {
         map[from.first][from.second] = 4;
-//        System.out.println("Map in silutionWave");
-//        for (int i = 0; i != map.length; i++) {
-//            for (int j = 0; j != map[i].length; j++) {
-//                System.out.print(map[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
         Stack<Pair<Integer>> path = new Stack<>();
         Pair<Integer> copyTo = new Pair<>(to);
         int lastStep = map[copyTo.first][copyTo.second];

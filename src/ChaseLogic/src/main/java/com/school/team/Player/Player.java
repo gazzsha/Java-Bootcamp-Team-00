@@ -1,13 +1,14 @@
-package com.school.team.Enemy;
+package com.school.team.Player;
 
 import com.school.team.Utils.Pair;
 
-public class Enemy {
-    public Enemy() {
-    }
-    private Pair<Integer> currentPosition;
+public class Player {
 
-    public Enemy(Pair<Integer> currentPosition) {
+    private Pair<Integer> currentPosition;
+    public Player() {
+    }
+
+    public Player(Pair<Integer> currentPosition) {
         this.currentPosition = currentPosition;
     }
 
