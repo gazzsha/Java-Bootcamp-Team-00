@@ -14,6 +14,9 @@ public class Pair <T extends Number> implements Cloneable {
         this.second = (T) pair.second;
     }
 
+    public Pair() {
+    }
+
     public T getFirst() {
         return first;
     }
