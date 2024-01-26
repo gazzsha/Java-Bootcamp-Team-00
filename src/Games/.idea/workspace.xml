@@ -5,13 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b992af3-6751-458c-80a6-f8b257b23664" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/logic/Production.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/game/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/logic/GameMap.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/logic/GameMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Colors/Colors$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Colors/Colors$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Colors/Colors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Colors/Colors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Symbol/Symbol.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Symbol/Symbol.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/game/Game.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/game/Game.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/logic/GameMap$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/GameMap$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/logic/GameMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/GameMap.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logic/ParseCommandLine.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logic/ParseCommandLine.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +65,7 @@
     <configuration name="game.Game" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="game.Game" />
       <module name="Games" />
-      <option name="PROGRAM_PARAMETERS" value="--enemiesCount=10 --wallsCount=10 --size=30 --profile=production" />
+      <option name="PROGRAM_PARAMETERS" value="--enemiesCount=20 --wallsCount=10 --size=18 --profile=production" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>

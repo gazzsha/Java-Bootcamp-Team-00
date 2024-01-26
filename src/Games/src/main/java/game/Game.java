@@ -15,21 +15,23 @@ public class Game {
         ParseCommandLine parseCommandLine = new ParseCommandLine();
         JCommander jCommander = JCommander.newBuilder().addObject(parseCommandLine).build();
         jCommander.parse(args);
-        try (Scanner scanner = new Scanner(System.in)) {
-            GameMap gameMap = new GameMap(parseCommandLine);
-            gameMap.generateMap();
-            gameMap.PrintGameMap();
-            System.out.println("Play in game? (9 - NO)");
-            char end = scanner.next().toCharArray()[0];
-            if (end == '9') {
-                System.out.println("You are lost!");
-            } else {
+        if ( (double)(parseCommandLine.getCountEnemies() + parseCommandLine.getCountWalls()) / (double) (Math.pow(parseCommandLine.getSizeMap(),2)) > 0.7 ) {
+            System.out.println("Map is busy");
+        } else{
+            try (Scanner scanner = new Scanner(System.in)) {
+                GameMap gameMap = new GameMap(parseCommandLine);
+                gameMap.generateMap();
                 gameMap.PrintGameMap();
-                gameMap.updateMap(scanner);
+                System.out.println("Play in game? (9 - NO)");
+                char end = scanner.next().toCharArray()[0];
+                if (end == '9') {
+                    System.out.println("You are lost!");
+                } else {
+                    gameMap.PrintGameMap();
+                    gameMap.updateMap(scanner);
+                }
             }
         }
-
-
     }
 
 }
