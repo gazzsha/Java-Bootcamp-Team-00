@@ -71,7 +71,7 @@ public class GameMap {
         gameMap[player.getCurrentPosition().first][player.getCurrentPosition().second] = type;
     }
 
-    private Boolean stepPerson(Scanner scanner) {
+    private Boolean stepPerson(Scanner scanner) throws Exception {
         Boolean win = false;
         Pair<Integer> currentPositionPerson = player.getCurrentPosition();
                 char step = scanner.next().toLowerCase(Locale.ROOT).toCharArray()[0];
@@ -133,6 +133,9 @@ public class GameMap {
                         }
                         break;
                     }
+                    case '9': {
+                        throw new Exception("Player give up!");
+                    }
                     default: {
                         System.out.println("Wrong char,try again!");
                         stepPerson(scanner);
@@ -158,16 +161,19 @@ public class GameMap {
         return false;
     }
 
-    public void updateMap() {
+    public void updateMap(Scanner scanner) {
         boolean loss = false;
-        try (Scanner scanner = new Scanner(System.in)) {
-            while (! stepPerson(scanner) && !(loss = stepEnemies())) {
+        try {
+            while (!stepPerson(scanner) && !(loss = stepEnemies())) {
                 PrintGameMap();
                 System.out.println("Your next step:");
             }
+            PrintGameMap();
+            if (loss) System.out.println("You  lost!");
+            else System.out.println("You  win!!!");
+        } catch (Exception e) {
+            System.out.println("You  lost!");
         }
-        PrintGameMap();
-        if (loss) System.out.println("You  lost!"); else System.out.println("You  win!!!");
     }
     public int[][] generateIntMap() {
 //        int[][] arr = new int[gameMap.length][gameMap.length];

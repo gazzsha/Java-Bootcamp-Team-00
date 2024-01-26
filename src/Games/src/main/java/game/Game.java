@@ -8,25 +8,26 @@ import logic.GameMap;
 import logic.ParseCommandLine;
 
 import java.io.IOException;
+import java.util.Scanner;
 
 public class Game {
     public static void main(String[] args) throws IOException {
         ParseCommandLine parseCommandLine = new ParseCommandLine();
         JCommander jCommander = JCommander.newBuilder().addObject(parseCommandLine).build();
         jCommander.parse(args);
-
-        GameMap gameMap = new GameMap(parseCommandLine);
-        gameMap.generateMap();
-       gameMap.PrintGameMap();
-        int[][] mama = gameMap.generateIntMap();
-
-//        for (int i = 0; i != mama.length; i++) {
-//            for (int j = 0; j != mama.length; j++) {
-//                System.out.print(mama[i][j] + " ");
-//            }
-//            System.out.println();
-//        }
-       gameMap.updateMap();
+        try (Scanner scanner = new Scanner(System.in)) {
+            GameMap gameMap = new GameMap(parseCommandLine);
+            gameMap.generateMap();
+            gameMap.PrintGameMap();
+            System.out.println("Play in game? (9 - NO)");
+            char end = scanner.next().toCharArray()[0];
+            if (end == '9') {
+                System.out.println("You are lost!");
+            } else {
+                gameMap.PrintGameMap();
+                gameMap.updateMap(scanner);
+            }
+        }
 
 
     }
